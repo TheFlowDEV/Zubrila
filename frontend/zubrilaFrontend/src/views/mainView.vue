@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import HeaderApp from "./header.vue"
-  import FooterApp from "./footer.vue"
+  import HeaderApp from "../components/header.vue"
+  import FooterApp from "../components/footer.vue"
 </script>
 
 <template>
@@ -16,7 +16,7 @@
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
           <div class="p-6 bg-white shadow rounded-lg hover:shadow-md transition">
             <h2 class="text-xl font-semibold mb-2">Карточки</h2>
-            <p class="text-gray-600">Повторяй материал по методике интервальных повторений.</p>
+            <p class="text-gray-600">Повторяй материал.</p>
           </div>
           <div class="p-6 bg-white shadow rounded-lg hover:shadow-md transition">
             <h2 class="text-xl font-semibold mb-2">Тесты</h2>
