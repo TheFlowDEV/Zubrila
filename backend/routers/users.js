@@ -27,8 +27,8 @@ userRouter.post("/register", async (req,res)=>{
                 email: email,
                 password: hashedPassword
             })
-            const token = jwt.sign({id: user._id,type:"ACCESS"}, SECRET, {expiresIn: "1h"});
-            const refreshToken = jwt.sign({id: user._id,type:"REFRESH"}, SECRET, {expiresIn: "12h"});
+            const token = jwt.sign({id: user.insertedId,type:"ACCESS"}, SECRET, {expiresIn: "1h"});
+            const refreshToken = jwt.sign({id: user.insertedId,type:"REFRESH"}, SECRET, {expiresIn: "12h"});
             return res.status(200).send({status:"success",token:token,refreshToken:refreshToken});
         }
         catch (error){

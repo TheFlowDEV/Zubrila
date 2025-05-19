@@ -1,0 +1,5 @@
+/frontend/zubrilaFrontend/node_modules
+/frontend/zubrilaFrontend/Dockerfile
+/backend/Dockerfile
+/backend/node_modules
+.dockerignore

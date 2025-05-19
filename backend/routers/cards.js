@@ -30,7 +30,6 @@ cardsRouter.get("/mycards",verifyToken, async (req,res)=>{
 cardsRouter.put("/mycards", verifyToken,async (req,res)=>{
     const user_id = req.userId;
     const newCard = req.body;
-    console.log(newCard);
     if (!newCard.name||!newCard.answer||!newCard.deck_id){
         return res.status(400).send({status:"badRequest"});
     }

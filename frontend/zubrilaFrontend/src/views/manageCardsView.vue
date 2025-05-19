@@ -59,7 +59,7 @@ function saveChanges(){
     <div class="mb-auto flex-grow" v-if="route.params.id">
       <section class="px-4 py-12 max-w-screen-xl mx-auto">
         <h1 class="text-4xl font-bold mb-6 text-center">Управление картами колоды {{deckName}}</h1>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
+        <div class="grid justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
           <grid-card v-for="card in cards" :key=card.id :title=card.name @edit="()=>openModal({
           id:card.id,
           name:card.name,

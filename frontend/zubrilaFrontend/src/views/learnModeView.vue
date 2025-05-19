@@ -66,14 +66,14 @@ onMounted(initializeLearning)
                 }
                 getCard();
       }">
-        <img src="/leftArrow.png" alt="<-" class="w-12 h-12 mb-2" />
+        <img src="/leftArrow.png" alt="<-" class="w-3 h-3 lg:w-12 lg:h-12 mb-2" />
         <span class="text-xl font-bold text-center">Забыл</span>
       </div>
     <div class="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col items-center" @click="()=>{
       currentCount++;
       getCard();
     }">
-      <img src="/rightArrow.png" alt="->" class="w-12 h-12 mb-2" />
+      <img src="/rightArrow.png" alt="->" class="w-3 h-3 lg:w-12 lg:h-12 mb-2" />
       <span class="text-xl font-bold text-center">Знаю</span>
     </div>
     <div class="flex justify-center"><span class="mb-6 text-center">{{currentCount}}/{{allCounts}} карт</span></div>
@@ -91,13 +91,13 @@ onMounted(initializeLearning)
         <span v-else>Похоже,что вы забывали, попробуйте ещё раз</span>
       </p>
       <div class="flex gap-2 justify-center">
-        <button class="border px-2 py-1 rounded-md" @click="()=>{
+        <button class="cursor-pointer border px-2 py-1 rounded-md" @click="()=>{
           forgotCount=0;
           currentCount=1;
           initializeLearning()
           }
         ">Учить заново</button>
-        <button class="border px-2 py-1 rounded-md" @click="()=>router.push('/manage')">Вернуться к колодам</button>
+        <button class="cursor-pointer border px-2 py-1 rounded-md" @click="()=>router.push('/manage')">Вернуться к колодам</button>
       </div>
     </div>
   </div>
