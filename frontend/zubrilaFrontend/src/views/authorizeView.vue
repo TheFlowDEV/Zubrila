@@ -13,7 +13,8 @@ const api = inject<AxiosInstance>("api")
 async function login(){
   if (api){
     api.post(registration.value?"/users/register":"/users/login",{email:email.value,password:password.value}).catch((err)=>{
-      error.value=`Произошла ошибка при запросе:${err}`;
+      if (err.status === 400) error.value ="Неверный логин или пароль";
+      else error.value=`Произошла ошибка при запросе:${err}`;
     }).then((res)=>{
       console.log(res)
       if (res){
